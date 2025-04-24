@@ -2,81 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: black;
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
-            /* <-- fixed from align-content */
+            align-content: center;
         }
         
         .card {
+            border: 2px solid black;
+            margin: 150px;
+            padding: 20px;
+            border-radius: 5px;
             background-color: #021921;
             color: white;
-            padding: 20px;
-            border-radius: 15px;
-            width: 260px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: scale(1.03);
+            height: 350px;
+            width: 230px;
         }
         
         .image-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 15px;
+            align-items: center;
         }
         
         .logo {
             height: 100px;
             width: 150px;
-            border-radius: 10px;
         }
         
         h2 {
-            font-size: 15px;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
         
         h3 {
-            font-size: 18px;
-            font-weight: bold;
             text-align: center;
-            color: #00ffc8;
             margin-bottom: 20px;
         }
         
         .button {
             display: flex;
+            flex-direction: row;
+            gap: 50px;
             justify-content: center;
-            gap: 12px;
         }
         
         button {
-            background-color: #00b894;
-            border: none;
             color: white;
-            padding: 10px 15px;
+            background-color: black;
+            padding: 10px;
             border-radius: 8px;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
             cursor: pointer;
-        }
-        
-        button:hover {
-            background-color: #019875;
         }
     </style>
 </head>
@@ -84,7 +70,7 @@
 <body>
     <div class="card">
         <div class="image-container">
-            <img src="/Images/shoes.jpeg" alt="Product Image" class="logo" />
+            <img src="/Images/shoes.jpeg" alt="Product Image" class="logo">
         </div>
         <h2>Calcetto Lightweight Casual Men's Running Sports Shoes CLT-0992 White 11 UK / White / CLT-0992 White</h2>
         <h3>Rs. ₹2,399.00</h3>
