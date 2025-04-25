@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Self Paced Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .carousel {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px 20px;
+            margin: 0 auto;
+        }
+        
+        .css-carousel {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .slides {
+            display: flex;
+            width: 300%;
+            transition: margin-left 0.6s ease;
+        }
+        
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .navigation-manual {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .manual-btn {
+            border: 2px solid white;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .manual-btn:hover {
+            background: white;
+        }
+        
+        #img1:checked~.first {
+            margin-left: 0;
+        }
+        
+        #img2:checked~.first {
+            margin-left: -100%;
+        }
+        
+        #img3:checked~.first {
+            margin-left: -200%;
+        }
+        
+        .card {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .card-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 20px;
+            width: 260px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 20px #10b981;
+        }
+        
+        .card-item h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #10b981;
+        }
+        
+        .card-item h4 {
+            color: #ccc;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+        
+        button {
+            background-color: #10b981;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #059669;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #aaa;
+            font-size: 1rem;
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .css-carousel {
+                height: auto;
+            }
+            .slide img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="css-carousel">
+            <input type="radio" name="radio-btn" id="img1" checked>
+            <input type="radio" name="radio-btn" id="img2">
+            <input type="radio" name="radio-btn" id="img3">
+
+            <div class="slides">
+                <div class="slide first">
+                    <img src="/Images/taj mahal.png" alt="Slide 1" />
+                </div>
+                <div class="slide">
+                    <img src="/Images/shoes.jpeg" alt="Slide 2" />
+                </div>
+                <div class="slide">
+                    <img src="/Images/3432.jpeg" alt="Slide 3" />
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="img1" class="manual-btn"></label>
+                <label for="img2" class="manual-btn"></label>
+                <label for="img3" class="manual-btn"></label>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-item">
+                <h2>YouTube</h2>
+                <h4>Explore our content</h4>
+                <button>Watch Now</button>
+            </div>
+            <div class="card-item">
+                <h2>Tech Talks</h2>
+                <h4>Latest Tutorials</h4>
+                <button>Watch Now</button>
+            </div>
+            <div class="card-item">
+                <h2>Projects</h2>
+                <h4>Build with us</h4>
+                <button>Watch Now</button>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2025 Abhishek Maurya | All Rights Reserved.
+        </footer>
+    </div>
+</body>
+
+</html>
